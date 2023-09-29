@@ -1,0 +1,8 @@
+services:
+  nginx-proxy:
+    image: nginx
+    volumes:
+      - ./conf.d:/etc/nginx/conf.d
+      - ./certificates:/etc/certificates
+    ports:
+      - "9999:443"
